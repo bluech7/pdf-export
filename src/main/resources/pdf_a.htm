@@ -1,0 +1,191 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Liquid Waste Acceptance Manifest</title>
+    <link rel="stylesheet" href="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//styles.css"/>
+</head>
+<body>
+<div class="logos">
+    <img src="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//Logo-PSVC.png" alt="PSVC"
+         class="logoPVSC"/>
+    <img src="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//Logo-ontrek.png" alt="PSVC"
+         class="logoOntrek"/>
+</div>
+<div class="numbers">
+    <div>
+        <p>Manifest Number:</p>
+        <p class="manifestNumber"> ${manifestNumber}</p>
+        <hr class="line"/>
+    </div>
+    <div>
+        <p>Customer Number:</p>
+        <p class="customerNumber"> ${customerNumber}</p>
+        <hr class="line"/>
+    </div>
+    <div>
+        <p>PVSC Decal Number:</p>
+        <p class="decalNumber"> ${decalNumber}</p>
+        <hr class="line"/>
+    </div>
+</div>
+<div class="qr-code">
+    <img src="${qrCode}" alt="QR Code"/>
+</div>
+
+<div class="header">
+    <p>PASSAIC VALLEY SEWERAGE COMMISSION</p>
+    <div>
+        <p>600 Wilson Avenue, Newark, NJ 07105</p>
+        <p>Phone: (973) 344-1800</p>
+    </div>
+    <p>LIQUID WASTE ACCEPTANCE MANIFEST</p>
+</div>
+<div class="generator" style="transform: translateY(-10px);">
+    <div class="row">
+        <div class="label">GENERATOR NAME:</div>
+        <div class="line2"><span>${generatorName}</span></div>
+    </div>
+    <div class="row container">
+        <div class="label">GENERATOR ADDRESS:</div>
+        <div class="line-text custom-underline">
+            ${generatorAddress}
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">GENERATOR PHONE NUMBER:</div>
+        <div class="line2"><span>${generatorPhoneNumber}</span></div>
+    </div>
+</div>
+
+<div class="transporter row transporterSectionB">
+    <p class="transporterLabel">Transporter</p>
+    <div class="transporterLeft">
+        <div class="row">
+            <div class="label">COMPANY NAME:</div>
+            <div class="line2"><span>${transporterCompanyName}</span></div>
+        </div>
+        <div class="row container">
+            <div class="label">ADDRESS:</div>
+            <div class="line-text custom-underline">
+                ${transporterAddress}
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">PHONE NUMBER:</div>
+            <div class="line2"><span>${transporterPhoneNumber}</span></div>
+        </div>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="cell right">
+        <div class="row">
+            <div class="label2">N.J.D.E.P., I.D. Number:</div>
+            <div class="line2"><span>${njdepNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer License Number:</div>
+            <div class="line2"><span>${trailerLicenseNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer State of Origin:</div>
+            <div class="line2"><span>${trailerStateOfOrigin}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer Number:</div>
+            <div class="line2"><span>${trailerNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer Capacity (In Gallons):</div>
+            <div class="line2"><span>${trailerCapacity}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Solid Waste Admin ID#:</div>
+            <div class="line2"><span>${solidWasteAdminId}</span></div>
+        </div>
+    </div>
+</div>
+<div class="generator-signatures transporterSectionB">
+    <div class="form-group">
+        <p>GENERATOR CERTIFICATION: I, an authorized representative of above listed waste generator, do certify that the
+            waste delivered hereby contains only waste approved by the PVSC</p>
+    </div>
+    <div class="signature-section">
+        <div>
+            <p>${generatorRepresentativeName}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Name Printed/Typed</p>
+        </div>
+        <div>
+            <img src="${signature3}" class='signatureTransporter'/>
+            <p class="signatureLine">_________________________</p>
+            <p>Signature</p>
+
+        </div>
+        <div>
+            <p class="">${generatorCertificationDate}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Month/Day/Year</p>
+        </div>
+    </div>
+</div>
+<div class="transporter-signatures pvscSectionB">
+    <div class="form-group">
+        <p>TRANSPORTER CERTIFICATION: I, an authorized representative of the transporter listed above, do certify that
+            the waste I have delivered to PVSC contains only the waste originated from the generator listed above</p>
+    </div>
+    <div class="signature-section">
+        <div>
+            <p>${transporterRepresentativeName}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Name Printed/Typed</p>
+        </div>
+        <div>
+            <img src="${signature3}" class='signatureTransporter'/>
+            <p class="signatureLine">_________________________</p>
+            <p>Signature</p>
+
+        </div>
+        <div>
+            <p class="">${transporterCertificationDate}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Month/Day/Year</p>
+        </div>
+    </div>
+</div>
+<div class="psvc-signatures pvscSectionB">
+    <div class="form-group">
+        <p>PVSC facility operator - Certification of receipt Waste:</p>
+    </div>
+    <div class="signature-section">
+        <div>
+            <p>${transporterRepresentativeName}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Name Printed/Typed</p>
+        </div>
+        <div>
+            <img src="${signature3}" class='signatureTransporter'/>
+            <p class="signatureLine">_________________________</p>
+            <p>Signature</p>
+
+        </div>
+        <div>
+            <p class="">${transporterCertificationDate}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Month/Day/Year</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>SAMPLE ID#</p>
+            <p class="footerValues">${receiptSampleId}</p>
+        </div>
+        <div>
+            <p>TIME IN</p>
+            <p class="footerValues"> ${receiptTimeIn}</p>
+        </div>
+        <div>
+            <p>DUMP SITE</p>
+            <p class="footerValues"> ${receiptDumpSite}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

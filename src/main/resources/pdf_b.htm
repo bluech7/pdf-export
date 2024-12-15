@@ -1,0 +1,233 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Liquid Waste Acceptance Manifest</title>
+    <link rel="stylesheet" href="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//styles.css"/>
+</head>
+<body>
+<div class="logos">
+    <img src="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//Logo-PSVC.png" alt="PSVC"
+         class="logoPVSC"/>
+    <img src="file:///C://Users//ingri//Desktop//pdf-export//src//main//resources//Logo-ontrek.png" alt="PSVC"
+         class="logoOntrek"/>
+</div>
+<div class="numbers">
+    <div>
+        <p>Manifest Number:</p>
+        <p class="manifestNumber"> ${manifestNumber}</p>
+        <hr class="line"/>
+    </div>
+    <div>
+        <p>Customer Number:</p>
+        <p class="customerNumber"> ${customerNumber}</p>
+        <hr class="line"/>
+    </div>
+    <div>
+        <p>PVSC Decal Number:</p>
+        <p class="decalNumber"> ${decalNumber}</p>
+        <hr class="line"/>
+    </div>
+</div>
+<div class="qr-code">
+    <img src="${qrCode}" alt="QR Code"/>
+</div>
+
+<div class="header">
+    <p>PASSAIC VALLEY SEWERAGE COMMISSION</p>
+    <div>
+        <p>600 Wilson Avenue, Newark, NJ 07105</p>
+        <p>Phone: (973) 344-1800</p>
+    </div>
+    <p>LIQUID WASTE ACCEPTANCE MANIFEST</p>
+</div>
+<div class="checkboxes">
+    <p>(CHECK ONE)</p>
+    <form>
+        <table>
+            <tr>
+                <td class="checkbox">
+                    <label>
+                        <span class="custom-checkbox checked"></span>
+                        <span class="checkboxLabel">Residential Septage</span>
+                    </label>
+                </td>
+                <td class="checkbox">
+                    <label>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkboxLabel">Sanitary Waste (graywater)</span>
+                    </label>
+                </td>
+                <td class="checkbox">
+                    <label>
+                        <span class="custom-checkbox"></span>
+                        <span class="checkboxLabel">Lift Station / Sewer Lin C/O</span>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="sources" style="transform: translateY(-30px);">
+    <p>The Liquid waste was collected from the following sources: </p>
+    <form>
+        <table class="sourcesTable">
+            <thead>
+            <tr>
+                <th class="sourcesHeader">Name</th>
+                <th class="sourcesHeader">Address</th>
+                <th class="sourcesHeader">City, State</th>
+                <th class="sourcesHeader">Phone Number</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="sourcesRow" th:each="wasteSource, iterStat : ${wasteSources}">
+                <td th:text="${wasteSource.sourceName}" class="sourceColumn"></td>
+                <td th:text="${wasteSource.sourceAddress}" class="sourceColumn"></td>
+                <td th:text="${wasteSource.sourceCity}" class="sourceColumn"></td>
+                <td th:text="${wasteSource.sourcePhoneNumber}" class="sourceColumn"></td>
+            </tr>
+            <tr class="sourcesRow" th:each="i : ${#numbers.sequence(1, 5 - wasteSources.size())}"
+                th:if="${wasteSources.size() < 5}">
+                <td class="sourceColumn"></td>
+                <td class="sourceColumn"></td>
+                <td class="sourceColumn"></td>
+                <td class="sourceColumn"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+<div class="transporter row transporterB">
+    <p class="transporterLabel">Transporter</p>
+    <div class="transporterLeft">
+        <div class="row">
+            <div class="label">COMPANY NAME:</div>
+            <div class="line2"><span>${transporterCompanyName}</span></div>
+        </div>
+        <div class="row container">
+            <div class="label">ADDRESS:</div>
+            <div class="line-text custom-underline">
+                ${transporterAddress}
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">PHONE NUMBER:</div>
+            <div class="line2"><span>${transporterPhoneNumber}</span></div>
+        </div>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="cell right">
+        <div class="row">
+            <div class="label2">N.J.D.E.P., I.D. Number:</div>
+            <div class="line2"><span>${njdepNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer License Number:</div>
+            <div class="line2"><span>${trailerLicenseNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer Number:</div>
+            <div class="line2"><span>${trailerNumber}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Trailer Capacity:</div>
+            <div class="line2"><span>${trailerCapacity}</span></div>
+        </div>
+        <div class="row">
+            <div class="label2">Solid Waste Admin ID#:</div>
+            <div class="line2"><span>${solidWasteAdminId}</span></div>
+        </div>
+    </div>
+</div>
+<div class="transporter-signatures transporterSectionB">
+    <div class="certification-container">
+        <!-- Title -->
+        <div class="certification-title">
+            TRANSPORTER CERTIFICATION:
+        </div>
+
+        <table>
+            <tr>
+                <td colspan="1" style="width: 5%;">
+                    <strong>I,</strong>
+                </td>
+                <td colspan="2" style="width: 10%;text-align:center;">
+                    <div class="transporterSection">
+                        <p class="transporterRepresentative">${transporterRepresentativeName}</p>
+                        <p class="signatureLine">_________________________</p>
+                        <p class="nameOfTransporter">(Name of Transporter)</p>
+                    </div>
+                </td>
+                <td colspan="3" style="width: 85%;">
+                    , do hereby certify that the liquid waste which I have delivered to the Passaic Valley Sewerage
+                    Commission
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="width:100%;">
+                    <p class="certificationText"></p>
+                    contains residential septage, sanitary waste, or lift station /
+                    swer line c/o, and does not contain industrial waste or grease as defined by the PSVC Rules &amp;
+                    Regulations. I certify further that the liquid waste I have delivered originated only at the locations listed above.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="signature-section">
+        <div>
+            <p>${transporterRepresentativeName}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Name Printed/Typed</p>
+        </div>
+        <div>
+            <img src="${signature3}" class='signatureTransporter'/>
+            <p class="signatureLine">_________________________</p>
+            <p>Signature</p>
+
+        </div>
+        <div>
+            <p class="">${transporterCertificationDate}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Month/Day/Year</p>
+        </div>
+    </div>
+</div>
+<div class="psvc-signatures pvscSectionB">
+    <div class="form-group">
+        <p>PVSC Operator - Certification of receipt of Septage, Sanitary Waste, or List Station / Sewer Line C/O</p>
+    </div>
+    <div class="signature-section">
+        <div>
+            <p>${facilityOperatorName}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Name Printed/Typed</p>
+        </div>
+        <div>
+            <img src="${signature1}" class="signatureTransporter"/>
+            <p class="signatureLine">_________________________</p>
+            <p>Signature</p>
+
+        </div>
+        <div>
+            <p class="">${receiptCertificationDate}</p>
+            <p class="signatureLine">_________________________</p>
+            <p>Month/Day/Year</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <p>SAMPLE ID#</p>
+            <p class="footerValues">${receiptSampleId}</p>
+        </div>
+        <div>
+            <p>TIME IN</p>
+            <p class="footerValues"> ${receiptTimeIn}</p>
+        </div>
+        <div>
+            <p>DUMP SITE</p>
+            <p class="footerValues"> ${receiptDumpSite}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

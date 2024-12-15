@@ -1,0 +1,436 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.header, .section {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.header p {
+    padding-top: 7px;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 10px;
+    line-height: 0.5;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 250px;
+}
+
+.signature-section {
+    margin-top: 20px;
+}
+
+.signature-section div {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.signatureTransporter {
+    width: 150px;
+    height: 60px;
+}
+
+.certificationText {
+    margin-top: -23px;
+}
+
+.nameOfTransporter {
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+.transporterRepresentative {
+    margin-bottom: 3px;
+}
+
+.transporterSection {
+    margin-left: -20px;
+    margin-top: 17px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.footer div {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+}
+
+.footer p {
+    display: inline-block;
+    text-align: right;
+}
+
+.footerValues {
+    padding-left: 30px;
+    text-decoration: underline;
+}
+
+.signature-section div p {
+    margin: 0;
+}
+
+.signatureLine {
+    margin-top: -10px !important;
+}
+
+.logoPVSC {
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    width: 350px;
+    height: 70px;
+}
+
+.logoOntrek {
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    width: 200px;
+    height: 50px;
+}
+
+.numbers {
+    padding-top: 60px;
+    line-height: 0.3;
+    font-size: 10px;
+    width: auto;
+}
+
+.qr-code {
+    position: absolute;
+    right: 0;
+    margin-top: -195px;
+    margin-right: -80px;
+    transform: scale(0.5);
+}
+
+.line {
+    margin-top: -8px;
+    border: 0;
+    border-top: 0.1px solid #000;
+    width: 15%;
+    margin-left: 120px;
+    margin-right: 0;
+}
+
+.lineAddress {
+    border: 0;
+    border-top: 0.1px solid #000;
+    position: relative;
+    width: 60%;
+    margin-left: 150px;
+    margin-right: 0;
+}
+
+.generator {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.transporter {
+    margin: 0 auto;
+    border: 1px solid black;
+    line-height: 0.5;
+    margin-top: 12px;
+}
+
+.generator-signatures {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.transporter-signatures {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.psvc-signatures {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.label {
+    display: table-cell;
+    width: 30%;
+    vertical-align: middle;
+}
+
+.label2 {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.line2 {
+    display: table-cell;
+    position: relative;
+    border-bottom: 0.1px solid black;
+    text-align: center;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
+
+.vertical-line {
+    display: table-cell;
+    border-left: 1px solid black;
+    width: 0;
+    margin: -10px;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.right {
+    width: 50%;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.checkbox {
+    padding-left: 75px;
+    transform: translateY(-10px);
+}
+
+.sources {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.sourceLabel {
+    text-decoration: underline;
+    padding-left: 40px;
+}
+
+.address {
+    padding-right: 150px;
+}
+
+.lineSources {
+    border-bottom: 0.1px solid black;
+    padding-top: 20px;
+    margin-left: 60px;
+    display: table;
+    width: 90%;
+}
+
+.manifestNumber {
+    position: absolute;
+    margin-left: 120px;
+    top: 58px;
+}
+
+.customerNumber {
+    position: absolute;
+    margin-left: 120px;
+    top: 75px;
+}
+
+.decalNumber {
+    position: absolute;
+    margin-left: 120px;
+    top: 92px;
+}
+
+.receiptSampleNumber {
+    position: absolute;
+    margin-left: 120px;
+    top: 92px;
+}
+
+.sourcesTable {
+    line-height: 0.5;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sourceColumn {
+    padding-left: 10px;
+    padding-bottom: 5.1px;
+    padding-top: 7px;
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 13px;
+}
+
+.sourcesHeader {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.sourcesRow {
+    position: relative;
+}
+
+.sourcesRow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    border-bottom: 0.1px solid black;
+    background-color: black;
+    margin-left: 10px;
+}
+
+.transporterLabel {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.transporterLeft {
+    margin-left: 5px;
+    padding-left: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.certification-container {
+    line-height: 0.9;
+}
+
+.certification-title {
+    margin-bottom: 10px;
+}
+
+.certification-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.certification-table td {
+    vertical-align: top;
+    width: 100%;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+.transporter-name {
+    display: inline-block;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.name-label {
+    font-style: italic;
+    font-size: 9px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.line-text {
+    display: inline-block;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+    padding-bottom: 3px;
+    text-decoration: underline;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.line-text::after {
+    content: "";
+    display: block;
+    width: 96%;
+    border-bottom: 0.3px solid black;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+.checkboxLabel{
+    transform: translateY(-2px);
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 14px; /* Adjust the size of the checkbox */
+    height: 14px;
+    border: 1px solid #000; /* Border color for checkbox */
+    border-radius: 3px; /* Optional: rounded corners */
+    background-color: white; /* Background color */
+    margin-right: 5px; /* Space between checkbox and label */
+    vertical-align: bottom; /* Aligns the checkbox with the text */
+    position: relative;
+}
+
+/* Add 'X' inside the checkbox when checked */
+.custom-checkbox.checked::after {
+    content: "X"; /* X character inside the checkbox */
+    color: black; /* Color of the 'X' */
+    font-weight: bold;
+    font-size: 12px; /* Adjust size of the 'X' */
+    position: absolute;
+    top: 0; /* Position the X at the top of the checkbox */
+    left: 0; /* Align the X to the left of the checkbox */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center the X horizontally */
+    line-height: 16px; /* Center the X vertically */
+}
+
+.checkboxLabel {
+    vertical-align: middle;
+}
+
+.transporterB{
+margin-top:-25px;
+}
+
+.transporterSectionB{
+margin-top:-5px;
+}
+
+.pvscSectionB{
+margin-top:5px;
+}
+
+.checkboxes{
+    transform: translateY(-15px);
+}
