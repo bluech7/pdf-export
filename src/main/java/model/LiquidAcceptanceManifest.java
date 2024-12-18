@@ -39,7 +39,6 @@ public class LiquidAcceptanceManifest {
     private String receiptSampleId;
     private String receiptTimeIn;
     private String receiptDumpSite;
-    //Checkbox
-    private String wasteType;
+    //sources
     private List<WasteSource> wasteSources;
 }
