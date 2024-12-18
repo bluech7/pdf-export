@@ -13,17 +13,17 @@
 <div class="numbers">
     <div>
         <p>Manifest Number:</p>
-        <p class="manifestNumber"> ${manifestNumber}</p>
+        <p class="manifestNumber" th:text="${manifest.manifestNumber}"></p>
         <hr class="line"/>
     </div>
     <div>
         <p>Customer Number:</p>
-        <p class="customerNumber"> ${customerNumber}</p>
+        <p class="customerNumber" th:text="${manifest.customerNumber}"></p>
         <hr class="line"/>
     </div>
     <div>
-        <p>PVSC Decal Number:</p>
-        <p class="decalNumber"> ${decalNumber}</p>
+        <p>Sample ID Number:</p>
+        <p class="receiptSampleNumber" th:text="${manifest.receiptSampleId}"></p>
         <hr class="line"/>
     </div>
 </div>
@@ -46,19 +46,19 @@
             <tr>
                 <td class="checkbox">
                     <label>
-                        <span class="custom-checkbox checked"></span>
+                        <span class="custom-checkbox" th:classappend="${manifest.residentialSeptage} ? 'checked' : ''"></span>
                         <span class="checkboxLabel">Residential Septage</span>
                     </label>
                 </td>
                 <td class="checkbox">
                     <label>
-                        <span class="custom-checkbox"></span>
+                        <span class="custom-checkbox" th:classappend="${manifest.sanitaryWaste} ? 'checked' : ''"></span>
                         <span class="checkboxLabel">Sanitary Waste (graywater)</span>
                     </label>
                 </td>
                 <td class="checkbox">
                     <label>
-                        <span class="custom-checkbox"></span>
+                        <span class="custom-checkbox" th:classappend="${manifest.liftStationOrSewerLin} ? 'checked' : ''"></span>
                         <span class="checkboxLabel">Lift Station / Sewer Lin C/O</span>
                     </label>
                 </td>
@@ -102,40 +102,40 @@
     <div class="transporterLeft">
         <div class="row">
             <div class="label">COMPANY NAME:</div>
-            <div class="line2"><span>${transporterCompanyName}</span></div>
+            <div class="line2"><span th:text="${manifest.transporterCompanyName}"></span></div>
         </div>
         <div class="row container">
             <div class="label">ADDRESS:</div>
             <div class="line-text custom-underline">
-                ${transporterAddress}
+                <span th:text="${manifest.transporterAddress}"></span>
             </div>
         </div>
         <div class="row">
             <div class="label">PHONE NUMBER:</div>
-            <div class="line2"><span>${transporterPhoneNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.transporterPhoneNumber}"></span></div>
         </div>
     </div>
     <div class="vertical-line"></div>
     <div class="cell right">
         <div class="row">
             <div class="label2">N.J.D.E.P., I.D. Number:</div>
-            <div class="line2"><span>${njdepNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.njdepNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer License Number:</div>
-            <div class="line2"><span>${trailerLicenseNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerLicenseNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer Number:</div>
-            <div class="line2"><span>${trailerNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer Capacity:</div>
-            <div class="line2"><span>${trailerCapacity}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerCapacity}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Solid Waste Admin ID#:</div>
-            <div class="line2"><span>${solidWasteAdminId}</span></div>
+            <div class="line2"><span th:text="${manifest.solidWasteAdminId}"></span></div>
         </div>
     </div>
 </div>
@@ -153,7 +153,7 @@
                 </td>
                 <td colspan="2" style="width: 10%;text-align:center;">
                     <div class="transporterSection">
-                        <p class="transporterRepresentative">${transporterRepresentativeName}</p>
+                        <p class="transporterRepresentative" th:text="${manifest.transporterRepresentativeName}"></p>
                         <p class="signatureLine">_________________________</p>
                         <p class="nameOfTransporter">(Name of Transporter)</p>
                     </div>
@@ -168,25 +168,26 @@
                     <p class="certificationText"></p>
                     contains residential septage, sanitary waste, or lift station /
                     swer line c/o, and does not contain industrial waste or grease as defined by the PSVC Rules &amp;
-                    Regulations. I certify further that the liquid waste I have delivered originated only at the locations listed above.
+                    Regulations. I certify further that the liquid waste I have delivered originated only at the
+                    locations listed above.
                 </td>
             </tr>
         </table>
     </div>
     <div class="signature-section">
         <div>
-            <p>${transporterRepresentativeName}</p>
+            <p th:text="${manifest.transporterRepresentativeName}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Name Printed/Typed</p>
         </div>
         <div>
-            <img src="${signature3}" class='signatureTransporter'/>
+            <img th:src="${signature3}" class='signatureTransporter'/>
             <p class="signatureLine">_________________________</p>
             <p>Signature</p>
 
         </div>
         <div>
-            <p class="">${transporterCertificationDate}</p>
+            <p th:text="${manifest.transporterCertificationDate}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Month/Day/Year</p>
         </div>
@@ -198,18 +199,18 @@
     </div>
     <div class="signature-section">
         <div>
-            <p>${facilityOperatorName}</p>
+            <p th:text="${manifest.facilityOperatorName}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Name Printed/Typed</p>
         </div>
         <div>
-            <img src="${signature1}" class="signatureTransporter"/>
+            <img th:src="${signature1}" class="signatureTransporter"/>
             <p class="signatureLine">_________________________</p>
             <p>Signature</p>
 
         </div>
         <div>
-            <p class="">${receiptCertificationDate}</p>
+            <p th:text="${manifest.receiptCertificationDate}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Month/Day/Year</p>
         </div>
@@ -217,15 +218,15 @@
     <div class="footer">
         <div>
             <p>SAMPLE ID#</p>
-            <p class="footerValues">${receiptSampleId}</p>
+            <p class="footerValues" th:text="${manifest.receiptSampleId}"></p>
         </div>
         <div>
             <p>TIME IN</p>
-            <p class="footerValues"> ${receiptTimeIn}</p>
+            <p class="footerValues" th:text="${manifest.receiptTimeIn}"></p>
         </div>
         <div>
             <p>DUMP SITE</p>
-            <p class="footerValues"> ${receiptDumpSite}</p>
+            <p class="footerValues" th:text="${manifest.receiptDumpSite}"></p>
         </div>
     </div>
 </div>

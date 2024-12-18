@@ -13,17 +13,17 @@
 <div class="numbers">
     <div>
         <p>Manifest Number:</p>
-        <p class="manifestNumber"> ${manifestNumber}</p>
+        <p class="manifestNumber" th:text="${manifest.manifestNumber}"></p>
         <hr class="line"/>
     </div>
     <div>
         <p>Customer Number:</p>
-        <p class="customerNumber"> ${customerNumber}</p>
+        <p class="customerNumber" th:text="${manifest.customerNumber}"></p>
         <hr class="line"/>
     </div>
     <div>
         <p>PVSC Decal Number:</p>
-        <p class="decalNumber"> ${decalNumber}</p>
+        <p class="decalNumber" th:text="${manifest.decalNumber}"></p>
         <hr class="line"/>
     </div>
 </div>
@@ -42,17 +42,17 @@
 <div class="generator" style="transform: translateY(-10px);">
     <div class="row">
         <div class="label">GENERATOR NAME:</div>
-        <div class="line2"><span>${generatorName}</span></div>
+        <div class="line2"><span th:text="${manifest.generatorName}"></span></div>
     </div>
     <div class="row container">
         <div class="label">GENERATOR ADDRESS:</div>
         <div class="line-text custom-underline">
-            ${generatorAddress}
+            <span th:text="${manifest.generatorAddress}"></span>
         </div>
     </div>
     <div class="row">
         <div class="label">GENERATOR PHONE NUMBER:</div>
-        <div class="line2"><span>${generatorPhoneNumber}</span></div>
+        <div class="line2"><span th:text="${manifest.generatorPhoneNumber}"></span></div>
     </div>
 </div>
 
@@ -61,44 +61,44 @@
     <div class="transporterLeft">
         <div class="row">
             <div class="label">COMPANY NAME:</div>
-            <div class="line2"><span>${transporterCompanyName}</span></div>
+            <div class="line2"><span th:text="${manifest.transporterCompanyName}"></span></div>
         </div>
         <div class="row container">
             <div class="label">ADDRESS:</div>
             <div class="line-text custom-underline">
-                ${transporterAddress}
+                <span th:text="${manifest.transporterAddress}"></span>
             </div>
         </div>
         <div class="row">
             <div class="label">PHONE NUMBER:</div>
-            <div class="line2"><span>${transporterPhoneNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.transporterPhoneNumber}"></span></div>
         </div>
     </div>
     <div class="vertical-line"></div>
     <div class="cell right">
         <div class="row">
             <div class="label2">N.J.D.E.P., I.D. Number:</div>
-            <div class="line2"><span>${njdepNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.njdepNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer License Number:</div>
-            <div class="line2"><span>${trailerLicenseNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerLicenseNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer State of Origin:</div>
-            <div class="line2"><span>${trailerStateOfOrigin}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerStateOfOrigin}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer Number:</div>
-            <div class="line2"><span>${trailerNumber}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerNumber}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Trailer Capacity (In Gallons):</div>
-            <div class="line2"><span>${trailerCapacity}</span></div>
+            <div class="line2"><span th:text="${manifest.trailerCapacity}"></span></div>
         </div>
         <div class="row">
             <div class="label2">Solid Waste Admin ID#:</div>
-            <div class="line2"><span>${solidWasteAdminId}</span></div>
+            <div class="line2"><span th:text="${manifest.solidWasteAdminId}"></span></div>
         </div>
     </div>
 </div>
@@ -109,18 +109,18 @@
     </div>
     <div class="signature-section">
         <div>
-            <p>${generatorRepresentativeName}</p>
+            <p th:text="${manifest.generatorRepresentativeName}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Name Printed/Typed</p>
         </div>
         <div>
-            <img src="${signature3}" class='signatureTransporter'/>
+            <img th:src="${signature3}" class='signatureTransporter'/>
             <p class="signatureLine">_________________________</p>
             <p>Signature</p>
 
         </div>
         <div>
-            <p class="">${generatorCertificationDate}</p>
+            <p th:text="${manifest.generatorCertificationDate}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Month/Day/Year</p>
         </div>
@@ -133,18 +133,18 @@
     </div>
     <div class="signature-section">
         <div>
-            <p>${transporterRepresentativeName}</p>
+            <p th:text="${manifest.transporterRepresentativeName}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Name Printed/Typed</p>
         </div>
         <div>
-            <img src="${signature3}" class='signatureTransporter'/>
+            <img th:src="${signature3}" class='signatureTransporter'/>
             <p class="signatureLine">_________________________</p>
             <p>Signature</p>
 
         </div>
         <div>
-            <p class="">${transporterCertificationDate}</p>
+            <p th:text="${manifest.transporterCertificationDate}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Month/Day/Year</p>
         </div>
@@ -156,18 +156,18 @@
     </div>
     <div class="signature-section">
         <div>
-            <p>${transporterRepresentativeName}</p>
+            <p th:text="${manifest.transporterRepresentativeName}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Name Printed/Typed</p>
         </div>
         <div>
-            <img src="${signature3}" class='signatureTransporter'/>
+            <img th:src="${signature3}" class='signatureTransporter'/>
             <p class="signatureLine">_________________________</p>
             <p>Signature</p>
 
         </div>
         <div>
-            <p class="">${transporterCertificationDate}</p>
+            <p th:text="${manifest.transporterCertificationDate}"></p>
             <p class="signatureLine">_________________________</p>
             <p>Month/Day/Year</p>
         </div>
@@ -175,15 +175,15 @@
     <div class="footer">
         <div>
             <p>SAMPLE ID#</p>
-            <p class="footerValues">${receiptSampleId}</p>
+            <p class="footerValues" th:text="${manifest.receiptSampleId}"></p>
         </div>
         <div>
             <p>TIME IN</p>
-            <p class="footerValues"> ${receiptTimeIn}</p>
+            <p class="footerValues" th:text="${manifest.receiptTimeIn}"></p>
         </div>
         <div>
             <p>DUMP SITE</p>
-            <p class="footerValues"> ${receiptDumpSite}</p>
+            <p class="footerValues" th:text="${manifest.receiptDumpSite}"></p>
         </div>
     </div>
 </div>

@@ -9,6 +9,10 @@ public class LiquidAcceptanceManifest {
     private String manifestNumber;
     private String customerNumber;
     private String decalNumber;
+    //checkboxes
+    private boolean isResidentialSeptage;
+    private boolean isSanitaryWaste;
+    private boolean isLiftStationOrSewerLin;
     //Generator
     private String generatorName;
     private String generatorAddress;
